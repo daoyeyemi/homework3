@@ -1,14 +1,20 @@
 // Prompt for length of password (btwn 8 and 128 characters)
 prompt("What length would you prefer your password to be? (Must be at least 8 characters)")
+// create array
 // Prompt for lowercase, uppercase, numeric, and special characters 
 prompt("Would you like lowercase letters to be included?")
+// create lowercase array
 prompt("Would you like uppercase letters to be included?")
+// create uppercase array
 prompt("Would you like numbers to be included? (0-9) ")
+// create number array
 prompt("Would you like special characters to be included?")
+//create special character array
 // Push array possibly?
 // Input should be validated
 // Prompts answered ---> password is generated
-// after password is generated, password is displayed on page or in alert
+// Create loops for password generation
+// After password is generated, password is displayed on page or in alert
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
