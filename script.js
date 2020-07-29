@@ -11,9 +11,11 @@ var specialArr = ['!','@','#','$','%','&','*','?','/']
 var possibleCharacters = []
 // Prompt for length of password (btwn 8 and 128 characters)
 var pwdLength = prompt("What length would you prefer your password to be? (Must be at least 8 characters)")
-  if (pwdLength < 8) {
+  if (pwdLength < 8 || pwdLength > 128)
       confirm("Password length must be at least 8 characters")
-    } 
+    } else {
+      
+    }
 // create array
 // Prompt for lowercase, uppercase, numeric, and special characters 
 
@@ -21,22 +23,29 @@ var pwdLength = prompt("What length would you prefer your password to be? (Must 
 var possibleLower = confirm("Would you like lowercase letters to be included?")
   if (possibleLower===true) {
     possibleCharacters.push(lowerArr)
-  } else {}
+  } else {
+    possibleCharacters.push('');
+  }
   // create variable for uppercase letter confirmation
   var possibleUpper = confirm("Would you like uppercase letters to be included?")
   if (possibleUpper===true) {
     possibleCharacters.push(upperArr)
-  } else {}
-  console.log(possibleCharacters)
+  } else {
+    possibleCharacters.push('');
+  }
 // create variable for number confirmation
 var possibleNumbers = confirm("Would you like numbers to be included? (0-9) ")
   if (possibleNumbers===true) {
     possibleCharacters.push(numberArr)
-  } else {}
+  } else {
+    possibleCharacters.push('');
+  }
 // create variable for special character confirmation
 var possibleSpecial = confirm("Would you like special characters to be included?")
   if (possibleSpecial===true) {
     possibleCharacters.push(specialArr)
+  } else {
+    possibleCharacters.push('');
   }
 // Input validation
 confirm("We have considered your criteria. Press the 'Generate Password' button to recieve your password.")
@@ -61,9 +70,8 @@ var generateBtn = document.querySelector("#generate");
 // generateBtn.addEventListener("click", writePassword);
 
 //create random generator
-var random = Math.floor(Math.random() * 10)+ 1
-console.log(random)
 
 for (i = 0; i < pwdLength; i++) {
-  
+  var random = Math.floor(Math.random() * 10)+ 1
+console.log(random)
 }
