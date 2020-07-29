@@ -25,7 +25,7 @@ var possibleLower = confirm("Would you like lowercase letters to be included?")
   // create variable for uppercase letter confirmation
   var possibleUpper = confirm("Would you like uppercase letters to be included?")
   if (possibleUpper===true) {
-    possibleCharacters.push(lowerArr)
+    possibleCharacters.push(upperArr)
   } else {}
   console.log(possibleCharacters)
 // create variable for number confirmation
@@ -60,3 +60,10 @@ var generateBtn = document.querySelector("#generate");
 // // Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
 
+//create random generator
+var random = Math.floor(Math.random() * 10)+ 1
+console.log(random)
+
+for (i = 0; i < pwdLength; i++) {
+  
+}
